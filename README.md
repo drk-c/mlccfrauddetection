@@ -14,3 +14,13 @@ Credit card fraud is a huge issue in the financial sector. Detecting fraudulent 
   
 **Dataset**  
 The dataset consists of multiple CSV files that I pulled from Kaggle containing credit card transaction information by the xxx,000's. Each file includes various features such as transaction amount, time, and more. The target variable in question, Class, indicates whether or not a transaction is fraudulent with the use of 0 or 1, 0 being legit and 1 being fraudulent.  
+
+**Models**  
+Modes used include:  
+Linear Regression  
+Logistic Regression  
+Random Forest Classifier  
+KNN  
+  
+**Evaluation**  
+I evaluated the models based on their accuracy, precision, recall, and score. I also used confusion matrices to visualize the model performance.  
