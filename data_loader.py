@@ -2,6 +2,7 @@ import pandas as pd
 import zipfile
 import os
 
+# lazy and automated unzipping
 def load_data(file_paths):
     dataframes = []
     for file_path in file_paths:

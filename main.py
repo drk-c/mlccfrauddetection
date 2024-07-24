@@ -5,7 +5,7 @@ from src.preprocess import preprocess_data
 from src.train import train_logistic_regression, train_random_forest
 from src.evaluate import evaluate_model, print_evaluation
 
-# List of file paths to your zip files
+# Zip file paths
 file_paths = [
     r'C:\Users\DChai\Downloads\creditcard_2023.csv.zip',
     r'C:\Users\DChai\Downloads\application_data.csv.zip',
@@ -16,7 +16,7 @@ file_paths = [
 data = load_data(file_paths)
 X_scaled, y = preprocess_data(data)
 
-# Split the data into training and testing sets
+# Split data: training and testing
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
 # Train models
@@ -27,6 +27,6 @@ rf_model = train_random_forest(X_train, y_train)
 log_reg_accuracy, log_reg_report, log_reg_matrix = evaluate_model(log_reg_model, X_test, y_test)
 rf_accuracy, rf_report, rf_matrix = evaluate_model(rf_model, X_test, y_test)
 
-# Print evaluation results
+# Print results
 print_evaluation("Logistic Regression", log_reg_accuracy, log_reg_report, log_reg_matrix)
 print_evaluation("Random Forest", rf_accuracy, rf_report, rf_matrix)
